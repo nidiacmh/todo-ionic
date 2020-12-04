@@ -6,6 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  //aqui se agrega el tab hija que queremos direccionar
+  {
+    path: 'agregar',
+    loadChildren: () => import('../agregar/agregar.module').then( m => m.AgregarPageModule)
   }
 ];
 
