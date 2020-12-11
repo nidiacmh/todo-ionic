@@ -39,7 +39,7 @@ export class AgregarPage implements OnInit {
                       .filter(itemData => !itemData.completado)
                       .length;
     console.log({pendientes});
-    if(pendientes ===0){
+    if(pendientes === 0){
       this.lista.terminadaEn=new Date();
       this.lista.terminada =true;
     }else{
