@@ -22,7 +22,7 @@
   </ion-list>
 
   <ion-list>
-    <ion-list-header color="dark" *ngIf="lisa.items.length > 0">
+    <ion-list-header color="dark" *ngIf="lista.items.length > 0">
       <ion-label>tareas por hacer</ion-label>
     </ion-list-header>
 
@@ -38,7 +38,7 @@
     </ion-item>
 
     <ion-item-options side="end">
-      <ion-item-option (clic)="borrar(i)" color="danger">
+      <ion-item-option (click)="borrar(i)" color="danger">
         <ion-icon slot="icon-only" name="close"></ion-icon>
       </ion-item-option>
     </ion-item-options>
