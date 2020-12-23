@@ -13,11 +13,10 @@ export class Tab1Page {
 
   constructor(public tareasService: TareasService,
               private router: Router,
-            private alertCtrl: AlertController) {
+              private alertCtrl: AlertController) {
 
               }
   async agregarLista(){
-    //this.router.navigateByUrl('/tabs/tab1/agregar');
     const alert = await this.alertCtrl.create({
       header: 'Nueva Lista',
       inputs: [
@@ -35,18 +34,18 @@ export class Tab1Page {
             console.log('Cancelar')
           }
         },
-          {
-            text:'Crear',
-            handler:(data)=>{
-              console.log(data);
-              if(data.titulo.lenght ===0){
-                return;
-              }
-              // crear la listas
-              const listaId = this.tareasService.crearLista(data.titulo);
-              this.router.navigateByUrl(`/tabs/tab1/agregar/${listaId}`);
+        {
+          text:'Crear',
+          handler:(data)=>{
+            console.log(data);
+            if(data.titulo.lenght ===0){
+              return;
             }
+              // crear la listas
+            const listaId = this.tareasService.crearLista(data.titulo);
+            this.router.navigateByUrl(`/tabs/tab1/agregar/${listaId}`);
           }
+        }
       ]
     });
    alert.present();

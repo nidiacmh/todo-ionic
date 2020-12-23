@@ -9,7 +9,7 @@ export class TareasService {
 
   constructor() {
     this.cargarStorage();
-    //console.log('servicio inicializado');
+    console.log('->Servicio inicializado');
 
   }
 
@@ -23,9 +23,7 @@ export class TareasService {
   }
 
   borrarLista(lista: Lista){
-    this.listas = this.listas.filter(listaData =>{
-      return listaData.id !== lista.id;
-    })
+    this.listas = this.listas.filter(listaData => listaData.id !== lista.id);
     this.guardarStorage();
   }
 
